@@ -10,7 +10,7 @@ var fetchedProjects = [];
 
 // GET COURSE FROM MYSQL DATA
 function fetchCourses() {
-  fetch('http://localhost:/web3api2020/src/model/courses.php', {
+  fetch('http://studenter.miun.se/~momo1600/writeable/DT173G/web3api2020/src/model/courses.php', {
     method: 'GET'
   })
     .then(response => response.json())
@@ -33,7 +33,7 @@ function fetchCourses() {
 
 //  GET PROJECTS FROM MYSQL DATA
 function fetchProjects() {
-  fetch('http://localhost/web3api2020/src/model/projects.php', {
+  fetch('http://studenter.miun.se/~momo1600/writeable/DT173G/web3api2020/src/model/projects.php', {
     method: 'GET'
   })
     .then(response => response.json())
@@ -70,7 +70,7 @@ function fetchProjects() {
 
 //  GET WORKS FROM MYSQL DATA
 function fetchWorks() {
-  fetch('http://localhost/web3api2020/src/model/works.php', {
+  fetch('http://studenter.miun.se/~momo1600/writeable/DT173G/web3api2020/src/model/works.php', {
     method: 'GET'
   })
     .then(response => response.json())

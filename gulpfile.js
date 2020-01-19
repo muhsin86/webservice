@@ -15,7 +15,7 @@ const files = {
 	jsPath: "src/viewer/js/main.js", 
 	coursesPath: "src/controller/courses.js", 
 	projectsPath: "src/controller/projects.js",
-	worksPath: "src/controller/works.js",
+	worksPath: "src/controller/works.js"
 };
 
 // Tasks for copying a php files and images
@@ -84,8 +84,6 @@ function worksjs() {
 	    .pipe(livereload()); 
 }
 
-////////////////////////////////////
-
 function scss()
 {
 	return src(files.scssPath)
@@ -104,7 +102,7 @@ function watchTask()
 		server:{
 			baseDir: 'public/' }
 		});
-	watch([files.phpPath, files.jsPath, files.scssPath, files.jsPath, files.coursesPath, files.projectsPath, files.worksPath],
+	watch([files.phpPath, files.jsPath, files.scssPath, files.jsPath, files.coursesPath, files.projectsPath, files.worksPath], 
         parallel(php, mainjs, coursesjs,  projectsjs, worksjs, scss)
     ).on('change', browserSync.reload);
 }
