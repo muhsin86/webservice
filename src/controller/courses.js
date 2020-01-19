@@ -17,7 +17,7 @@ document
 
 // GET COURSE FROM MYSQL DATA
 function getCourses() {
-  fetch('http://studenter.miun.se/~momo1600/writeable/DT173G/web3api2020-master/src/model/courses.php', {
+  fetch('http://localhost/web3api2020-master/src/model/courses.php', {
     method: 'GET'
   })
     .then(response => response.json())
@@ -105,7 +105,7 @@ function addCourse(e) {
   };
 
 
-  fetch('http://studenter.miun.se/~momo1600/writeable/DT173G/web3api2020-master/src/model/courses.php', {
+  fetch('http://localhost/web3api2020-master/src/model/courses.php', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -142,7 +142,7 @@ function addCourse(e) {
 // DELETE COURSE
 function deleteCourse() {
 
-  fetch('http://studenter.miun.se/~momo1600/writeable/DT173G/web3api2020-master/src/model/courses.php', {
+  fetch('http://localhost/web3api2020-master/src/model/courses.php', {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json'
@@ -185,7 +185,7 @@ function updateCourse() {
     url: url
   };
 
-  fetch('http://studenter.miun.se/~momo1600/writeable/DT173G/web3api2020-master/src/model/courses.php', {
+  fetch('http://localhost/web3api2020-master/src/model/courses.php', {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'

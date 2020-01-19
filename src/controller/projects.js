@@ -14,7 +14,7 @@ document.querySelector('.delete-project-btn').addEventListener('click', deletePr
 
 //  GET COURSE FROM MYSQL DATA
 function getProjects() {
-  fetch('http://studenter.miun.se/~momo1600/writeable/DT173G/web3api2020-master/src/model/projects.php', {
+  fetch('http://localhost/web3api2020-master/src/model/projects.php', {
     method: 'GET'
   })
     .then(response => response.json())
@@ -103,7 +103,7 @@ function addProject(e) {
     description: description
   };
 
-  fetch('http://studenter.miun.se/~momo1600/writeable/DT173G/web3api2020-master/src/model/projects.php', {
+  fetch('http://localhost/web3api2020-master/src/model/projects.php', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -139,7 +139,7 @@ function addProject(e) {
 
 // DELETE COURSE
 function deleteProject() {
-  fetch('http://studenter.miun.se/~momo1600/writeable/DT173G/web3api2020-master/src/model/projects.php', {
+  fetch('http://localhost/web3api2020-master/src/model/projects.php', {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json'
@@ -181,7 +181,7 @@ function updateProject() {
     description: description
   };
 
-  fetch('http://studenter.miun.se/~momo1600/writeable/DT173G/web3api2020-master/src/model/projects.php', {
+  fetch('http://localhost/web3api2020-master/src/model/projects.php', {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
